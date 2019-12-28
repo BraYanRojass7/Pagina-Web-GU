@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="../img/Logo.ico">
+    <title>Gente Util</title>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+    <!-- JAVA SCRIPT-->
+    <script type="text/javascript">
+
+        function loguin() {
+
+            var usuario = document.getElementById("usuario").value;
+            var contraseña = document.getElementById("contraseña").value;
+
+            if (usuario=="1" && contraseña=="2") {
+
+                window.location="../html/menu.html";
+                alert("welcome");
+
+            }else{
+
+                alert("Usuario o contraseña incorrectos");
+
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="modal-dialog text-center">
+
+        <img style="padding: 0%; margin: -10;" src="../img/GU_Blanco.png" alt="imagen Gente Util">
+
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                
+                <div class="col-12 user-img">
+                <img src="../img/user.png" onclick="location.href='../php/index.php'"/>
+                </div>
+
+                <form class="col-12" method="get">
+
+                    <div class="form-group" id="user-group">
+                        <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario" name="usuario" value=""/>
+                    </div>
+                    <div class="form-group" id="contrasena-group">
+                        <input type="password" class="form-control" id="contraseña" placeholder="Contrasena" name="password" value=""/>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary" name="btn_verica" id="verifica" onclick="loguin()" value="verifica"> <i class="fas fa-sign-in-alt"></i> Iniciar Sesion </button>
+
+                </form>
+
+                <div class="col-12 forgot">
+                    <a href="#">Recordar contrasena?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
